@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   <a href="https://gabrielmuresan.site/">
-    <img src="src/images/logo-03.svg" alt="Logo" width="140" height="140">
+    <img src="src/images/logo-_white.png" alt="Logo" width="140" height="140">
   </a>
 
   <h3 align="center">Portfolio v2.0</h3>
