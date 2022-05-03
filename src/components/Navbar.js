@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
-    <div className="container-fluid d-flex justify-content-center">
+    <div className="container-fluid d-flex justify-content-center sticky-top">
       <a
         className="btn btn-menu"
         data-bs-toggle="offcanvas"
