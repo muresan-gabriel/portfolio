@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <div className="container-fluid d-flex justify-content-center">
       <a
-        class="btn btn-menu"
+        className="btn btn-menu"
         data-bs-toggle="offcanvas"
         href="#offcanvasExample"
         role="button"
@@ -13,17 +13,17 @@ const Navbar = () => {
         MENU
       </a>
       <div
-        class="offcanvas offcanvas-top"
-        tabindex="-1"
+        className="offcanvas offcanvas-top"
+        tabIndex="-1"
         id="offcanvasExample"
         aria-labelledby="offcanvasExampleLabel"
       >
-        <div class="offcanvas-header d-flex flex-column">
+        <div className="offcanvas-header d-flex flex-column">
           <h5>Gabriel Mureșan</h5>
           <span>FRONTEND DEVELOPER</span>
           <span>GRAPHIC DESIGNER</span>
         </div>
-        <div class="offcanvas-body d-flex flex-column justify-content-center align-items-center">
+        <div className="offcanvas-body d-flex flex-column justify-content-center align-items-center">
           <Link to="/">HOME</Link>
           <Link to="/about">ABOUT</Link>
           <Link to="/services">SERVICES</Link>
