@@ -8,16 +8,18 @@ const About = () => {
         Hello! I'm Gabriel. <br />
         I'm a frontend developer and a graphic designer.
         <br />
+        <br />
         I aspire to craft fantastic web experiences.
         <br />
-        Got a great project in mind?
         <br />
-        Let's get in contact!
+        I am experienced with HTML5, CSS3, JS ES6+, but I am also familiar with
+        jQuery, Bootstrap, React, Node.js, express.js, MongoDB, PHP, and mySQL.
         <br />
+        <br />
+        I've been a freelance graphic designer for more than two years and I am
+        experienced in logo design, UI design, print design and social media
+        design.
       </p>
-      <a href="mailto:contact@gabrielmuresan.site" className="btn-email">
-        contact@gabrielmuresan.site
-      </a>
     </div>
   );
 };

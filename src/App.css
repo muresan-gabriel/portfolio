@@ -171,7 +171,7 @@ body {
 }
 
 .about-container-desktop {
-  height: 90vh;
+  padding-top: 3.5rem;
 }
 .presentation-paragraph {
   font-size: 32px;
@@ -244,6 +244,59 @@ body {
   font-weight: 600;
 }
 
+.project-image {
+  max-width: 500px;
+}
+
+.btn-back-home {
+  text-decoration: none;
+  color: black;
+  background-color: #f1f1f1;
+  border: 1px solid black;
+  padding: 5px 15px 5px 15px;
+  border-radius: 0 25px 25px 0;
+  font-size: 32px;
+  transition: 0.3s;
+  position: absolute;
+}
+
+.project-external-link {
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  border: 1px solid black;
+  padding: 10px 20px 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.project-external-link:hover {
+  color: black;
+  background-color: #6948ff;
+}
+
+.btn-back-home:hover {
+  color: black;
+  background-color: #6948ff;
+  padding: 5px 15px 5px 25px;
+}
+
+#project-container {
+  padding: 50px;
+}
+
+.project-description {
+  font-size: 26px;
+}
+
+.project-title {
+  cursor: default;
+  text-align: right;
+  font-size: 42px;
+  font-weight: 700;
+}
+
 .service-card h3,
 span,
 p {
@@ -279,12 +332,15 @@ p {
     font-size: 22px;
   }
   .presentation-paragraph {
-    font-size: 64px;
+    font-size: 52px;
   }
   .btn-email {
     font-size: 32px;
   }
   .services-container-desktop {
     flex-direction: row;
+  }
+  .project-description {
+    padding-left: 5rem;
   }
 }
