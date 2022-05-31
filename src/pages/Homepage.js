@@ -29,6 +29,7 @@ const Homepage = () => {
         </div>
       </div>
       <div className="container skill-set-container">
+        <h3 className="greeting-heading">Services</h3>
         <div className="info-container-home d-flex flex-column flex-wrap justify-content-center align-items-center col">
           <h3 className="info-heading">Web Development</h3>
           <div className="d-flex flex-wrap flex-row justify-content-center">
@@ -83,11 +84,46 @@ const Homepage = () => {
             alt="logo-skeleton"
           />
         </div>
-        <div className="info-container-home d-flex flex-column flex-wrap justify-content-center align-items-center col">
-          <h3 className="info-heading">UI Design</h3>
+      </div>
+      <div className="container">
+        <h3 className="greeting-heading">About me</h3>
+        <div className="container process-container d-flex flex-wrap justify-content-center">
+          <h3 className="info-header  info-container-header">
+            I'm a frontend developer and a self-taught graphic designer.
+          </h3>
+          <div className="information-card">
+            <h3 className="info-header orange-gradient-info">Creative</h3>
+
+            <p className="info-card-description">
+              I'm always looking to explore new things, to create fantastic
+              designs, and to implement clean solutions.
+            </p>
+          </div>
+          <div className="information-card">
+            <h3 className="info-header orange-gradient-info">Flexible</h3>
+
+            <p className="info-card-description">
+              I always try my best to adapt to all sorts of situations and
+              requirements, especially if they put me outside of my comfort
+              zone.
+            </p>
+          </div>
+          <div className="information-card">
+            <h3 className="info-header orange-gradient-info">Passionate</h3>
+
+            <p className="info-card-description">
+              I'm in love with the web and with the flexibility it offers in
+              creating fantastic looking and functional applications.
+            </p>
+          </div>
+          <h3 className="info-header info-container-header info-contact-header">
+            Let's get in contact!
+          </h3>
         </div>
-        <div className="info-container-home d-flex flex-column flex-wrap justify-content-center align-items-center col">
-          <h3 className="info-heading">Package / Product Design</h3>
+        <div className="container d-flex justify-content-center align-items-center">
+          <Link class="btn-cta-home" to="/contact">
+            Contact
+          </Link>
         </div>
       </div>
     </>
