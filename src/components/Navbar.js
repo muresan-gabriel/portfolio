@@ -1,72 +1,59 @@
-import React from "react";
 import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
-    <div className="container-fluid d-flex justify-content-center sticky-top">
-      <a
-        className="btn btn-menu"
-        data-bs-toggle="offcanvas"
-        href="#offcanvasExample"
-        role="button"
-        aria-controls="offcanvasExample"
-      >
-        MENU
-      </a>
-      <div
-        className="offcanvas offcanvas-top"
-        tabIndex="-1"
-        id="offcanvasExample"
-        aria-labelledby="offcanvasExampleLabel"
-      >
-        <div className="offcanvas-header d-flex flex-column">
-          <h5>Gabriel Mureșan</h5>
-          <span>FRONTEND DEVELOPER</span>
-          <span>GRAPHIC DESIGNER</span>
-        </div>
-        <div className="offcanvas-body d-flex flex-column justify-content-center align-items-center">
-          <Link to="/">HOME</Link>
-          <Link to="/about">ABOUT</Link>
-          <Link to="/services">SERVICES</Link>
-        </div>
-        <div className="social-container d-flex justify-content-center">
-          <a
-            href="https://www.linkedin.com/in/gabrielmuresanionut/"
-            className="social-icon"
-            target="_blank"
-          >
-            <i className="bi-linkedin"></i>
-          </a>
-          <a
-            href="https://github.com/muresan-gabriel"
-            className="social-icon"
-            target="_blank"
-          >
-            <i className="bi-github"></i>
-          </a>
-          <a
-            href="https://www.behance.net/muresangabriel"
-            className="social-icon"
-            target="_blank"
-          >
-            <i className="bi-behance"></i>
-          </a>
-          <a
-            href="https://dribbble.com/muresangabriel"
-            className="social-icon"
-            target="_blank"
-          >
-            <i className="bi-dribbble"></i>
-          </a>
-          <a
-            href="https://www.instagram.com/muresan__gabriel/"
-            className="social-icon"
-            target="_blank"
-          >
-            <i className="bi-instagram"></i>
-          </a>
+    <nav className="navbar container navbar-expand-lg navbar-light">
+      <div className="container-fluid">
+        <Link className="navbar-brand" to="/">
+          <img
+            className="logo-svg"
+            src="../img/logo-svg.svg"
+            alt="logo-loading"
+            id="logoSvgNavbar"
+          />
+        </Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i className="bi-list"></i>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0 d-flex align-items-center">
+            <li className="nav-item">
+              <Link className="link" to="/">
+                Home
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="link" to="/about">
+                About me
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="link" to="/projects">
+                Portfolio
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="link" to="/services">
+                Services
+              </Link>
+            </li>
+          </ul>
+          <form class="d-flex justify-content-center">
+            <Link class="btn btn-contact" to="/contact">
+              Contact me
+            </Link>
+          </form>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 

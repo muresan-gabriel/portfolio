@@ -1,6 +1,6 @@
 import WipPage from "../components/WipPage";
 
-const About = () => {
+const Portfolio = () => {
   return (
     <>
       <WipPage></WipPage>
@@ -8,4 +8,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Portfolio;
