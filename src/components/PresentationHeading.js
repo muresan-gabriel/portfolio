@@ -3,14 +3,14 @@ const PresentationHeading = () => {
     <>
       <div className="d-flex">
         <h4 class="greeting-heading greeting-heading-1">I</h4>
-        <h4>&nbsp;</h4>
+        <h4>&nbsp;&nbsp;</h4>
         <h4 class="greeting-heading greeting-heading-2">c</h4>
         <h4 class="greeting-heading greeting-heading-3">r</h4>
         <h4 class="greeting-heading greeting-heading-4">e</h4>
         <h4 class="greeting-heading greeting-heading-5">a</h4>
         <h4 class="greeting-heading greeting-heading-6">t</h4>
         <h4 class="greeting-heading greeting-heading-7">e</h4>
-        <h4>&nbsp;</h4>
+        <h4>&nbsp;&nbsp;</h4>
         <h4 class="greeting-heading greeting-heading-8">
           <span className="mint-gradient">f</span>
         </h4>
@@ -43,7 +43,7 @@ const PresentationHeading = () => {
         <h4 class="greeting-heading greeting-heading-17">w</h4>
         <h4 class="greeting-heading greeting-heading-18">e</h4>
         <h4 class="greeting-heading greeting-heading-19">b</h4>
-        <h4>&nbsp;</h4>
+        <h4>&nbsp;&nbsp;</h4>
         <h4 class="greeting-heading greeting-heading-20">e</h4>
         <h4 class="greeting-heading greeting-heading-21">x</h4>
         <h4 class="greeting-heading greeting-heading-22">p</h4>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import GreetingHeading from "../components/GreetingHeading";
 import PresentationHeading from "../components/PresentationHeading";
@@ -8,12 +8,6 @@ const Homepage = () => {
     <>
       <div className="container d-flex flex-column home-container justify-content-center">
         <div className="container-fluid d-flex flex-column align-items-center justify-content-center mt-5">
-          <img
-            class="home-illustration-01"
-            src="../img/heart-gradient.png"
-            alt="illustration"
-          />
-
           <div className="blurred-highlight-1"></div>
 
           <GreetingHeading />
@@ -121,11 +115,12 @@ const Homepage = () => {
           </h3>
         </div>
         <div className="container d-flex justify-content-center align-items-center">
-          <Link class="btn-cta-home" to="/contact">
+          <Link className="btn-cta-home" to="/contact">
             Contact
           </Link>
         </div>
       </div>
+      <script src="reveal.js"></script>
     </>
   );
 };

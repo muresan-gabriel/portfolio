@@ -72,7 +72,8 @@ img {
   height: 250px;
   top: 80%;
   left: 22%;
-  animation: fadein 2s ease-in;
+  transition: 2s;
+  animation: fadein 2s ease-in, fadeininf 3s infinite;
 }
 
 .skill-set-container {
@@ -88,6 +89,7 @@ img {
   background: linear-gradient(90deg, #19102e 21px, transparent 50%) center,
     linear-gradient(#19102e 21px, transparent 50%) center, #2e2d316b;
   background-size: 22px 22px;
+  animation: fadein 2s ease-in, slideInFromTop 1s;
 }
 
 .navbar-toggler,
@@ -104,6 +106,7 @@ img {
   margin: 5px;
   cursor: default;
   transition: 0.25s;
+  animation: fadein 3s ease-in, slideInFromTop 2s;
 }
 
 .sub-info:hover {
@@ -115,6 +118,7 @@ img {
   text-align: center;
   color: #eaeaea;
   cursor: default;
+  animation: fadein 4s ease-in, slideInFromTop 3s;
 }
 
 .code-header {
@@ -133,6 +137,7 @@ img {
   border-top: 1px solid rgba(71, 56, 200, 0.405);
   border-right: 1px solid rgba(143, 130, 255, 0.405);
   border-left: 1px solid rgba(143, 130, 255, 0.405);
+  animation: fadein 3s ease-in, slideInFromLeft 2s;
 }
 
 .code-snippet {
@@ -146,6 +151,7 @@ img {
   color: rgb(202, 202, 202);
   border: 1px solid rgba(143, 130, 255, 0.405);
   font-weight: 400;
+  animation: fadein 3s ease-in, slideInFromLeft 2s;
 }
 
 .code-formatting {
@@ -218,6 +224,7 @@ img {
 }
 
 .social-icon {
+  animation: fadein 3s ease-in, slideInFromTop 2s;
   margin: 20px;
   font-size: 21px;
   color: black;
@@ -259,6 +266,17 @@ img {
   background-color: rgb(228 228 228 / 15%);
 }
 
+.process-container .information-card:nth-child(2) {
+  animation: fadein 3s ease-in, slideInFromTop 2s;
+}
+
+.process-container .information-card:nth-child(3) {
+  animation: fadein 3.5s ease-in, slideInFromTop 2.5s;
+}
+.process-container .information-card:nth-child(4) {
+  animation: fadein 4s ease-in, slideInFromTop 3s;
+}
+
 .info-card-description {
   line-height: 2;
 }
@@ -267,6 +285,8 @@ img {
   text-align: center;
   color: white;
   font-weight: 700;
+
+  animation: fadein 1.5s ease-in, slideInFromTop 0.5s;
 }
 
 .info-container-header {
@@ -700,6 +720,17 @@ img {
   }
   to {
     opacity: 1;
+  }
+}
+@keyframes fadeininf {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
