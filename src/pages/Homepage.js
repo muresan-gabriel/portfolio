@@ -32,14 +32,14 @@ const Homepage = () => {
         <div className="info-container-home d-flex flex-column flex-wrap justify-content-center align-items-center col">
           <h3 className="info-heading">Web Development</h3>
           <div className="d-flex flex-wrap flex-row justify-content-center">
-            <span class="sub-info">React.js</span>
-            <span class="sub-info">Node.js</span>
-            <span class="sub-info">express.js</span>
-            <span class="sub-info">MongoDB</span>
-            <span class="sub-info">socket.io</span>
+            <span className="sub-info">React.js</span>
+            <span className="sub-info">Node.js</span>
+            <span className="sub-info">express.js</span>
+            <span className="sub-info">MongoDB</span>
+            <span className="sub-info">socket.io</span>
           </div>
-          <div class="code-header align-self-center">App.js</div>
-          <div class="code-snippet align-self-center">
+          <div className="code-header align-self-center">App.js</div>
+          <div className="code-snippet align-self-center">
             <span className="code-formatting code-pink">import</span> React{" "}
             <span className="code-formatting code-pink">from </span>'
             <span className="code-formatting code-yellow">react</span>';
@@ -68,15 +68,20 @@ const Homepage = () => {
             <span className="code-formatting code-pink">&#125;</span>;
           </div>
         </div>
-        <div className="info-container-home d-flex flex-column flex-wrap justify-content-center align-items-center col">
+        <div className="info-container-home info-container-logo-design d-flex flex-column flex-wrap justify-content-center align-items-center col">
           <h3 className="info-heading">Logo Design</h3>
           <div className="d-flex flex-wrap flex-row justify-content-center">
-            <span class="sub-info">Minimalistic</span>
-            <span class="sub-info">Modern</span>
-            <span class="sub-info">Clean</span>
-            <span class="sub-info">Responsivse</span>
-            <span class="sub-info">Expressive</span>
+            <span className="sub-info">Minimalistic</span>
+            <span className="sub-info">Modern</span>
+            <span className="sub-info">Clean</span>
+            <span className="sub-info">Responsive</span>
+            <span className="sub-info">Expressive</span>
           </div>
+          <img
+            className="logo-skeleton"
+            src="../img/logo-svg-skeleton.svg"
+            alt="logo-skeleton"
+          />
         </div>
         <div className="info-container-home d-flex flex-column flex-wrap justify-content-center align-items-center col">
           <h3 className="info-heading">UI Design</h3>
