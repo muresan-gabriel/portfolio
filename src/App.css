@@ -361,7 +361,7 @@ body {
   margin: 0.7em 0.7em 0 0.7em;
 }
 .project-page_proj-tag {
-  margin: 5px 0 5px 1em;
+  margin: 15px;
   border: 2px solid #5e2dff;
   color: #5e2dff;
   font-weight: 700;
@@ -380,6 +380,9 @@ body {
 }
 
 .project-page_project-external {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
   margin: 15px;
   background-color: #5e2dff;
   cursor: pointer;
