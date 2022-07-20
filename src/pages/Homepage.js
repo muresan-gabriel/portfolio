@@ -28,7 +28,7 @@ const Homepage = (props) => {
   const textArray = [
     "I'm Gabriel.",
     "I'm a web developer.",
-    "I'm working as an Intern @ ComputaCenter.",
+    "I'm a Software Engineer @ ComputaCenter.",
     "Let's craft a fantastic web together.",
   ];
 
