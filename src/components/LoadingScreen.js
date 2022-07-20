@@ -1,9 +1,9 @@
 import { React, useState, useEffect } from "react";
 
-const LoadingScreen = (props) => {
+const LoadingScreen = () => {
   return (
     <div
-      className="container d-flex justify-content-center align-items-center"
+      className="container d-flex flex-column justify-content-center align-items-center"
       id="loadingScreen"
     >
       <img
@@ -12,6 +12,11 @@ const LoadingScreen = (props) => {
         alt="logo-loading"
         id="logoSvg"
       />
+      <div className="hide-bug">
+        {setTimeout(() => {
+          document.getElementById("loadingScreen").classList.add("fadeOut");
+        }, 1300)}
+      </div>
     </div>
   );
 };

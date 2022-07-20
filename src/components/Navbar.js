@@ -1,59 +1,63 @@
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="navbar container navbar-expand-lg navbar-light">
-      <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
+    <>
+      <nav className="navbar container-fluid sticky-top">
+        <Link className="navbar-logo" to="/">
           <img
-            className="logo-svg"
+            className="navbar-svg"
             src="../img/logo-svg.svg"
             alt="logo-loading"
-            id="logoSvgNavbar"
           />
         </Link>
         <button
-          className="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          className="ham-menu"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasTop"
+          aria-controls="offcanvasTop"
         >
           <i className="bi-list"></i>
         </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0 d-flex align-items-center">
-            <li className="nav-item">
-              <Link className="link" to="/">
-                Home
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="link" to="/about">
-                About me
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="link" to="/projects">
-                Portfolio
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="link" to="/services">
-                Services
-              </Link>
-            </li>
-          </ul>
-          <form class="d-flex justify-content-center">
-            <Link class="btn btn-contact" to="/contact">
-              Contact me
+        <div
+          className="offcanvas offcanvas-top"
+          tabIndex="-1"
+          id="offcanvasTop"
+          aria-labelledby="offcanvasTopLabel"
+        >
+          <div className="offcanvas-header d-flex flex-column justify-content-center">
+            <button
+              type="button"
+              className="ham-menu close-nav align-self-end"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            >
+              <i className="bi-x-lg"></i>
+            </button>
+          </div>
+          <div
+            className="offcanvas-body d-flex flex-column justify-content-center align-items-center"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          >
+            <Link className="nav-link" to="/">
+              HOME
             </Link>
-          </form>
+            <Link className="nav-link" to="/about">
+              ABOUT
+            </Link>
+            <Link className="nav-link" to="/portfolio">
+              PORTFOLIO
+            </Link>
+            <Link className="nav-link" to="/contact">
+              CONTACT
+            </Link>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
 };
 

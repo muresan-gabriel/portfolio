@@ -1,19 +1,19 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
+
 import Homepage from "./pages/Homepage";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
-import Services from "./pages/Services";
 import ProjectPage from "./pages/ProjectPage";
+
 import Navbar from "./components/Navbar";
+
 import "./App.css";
 import LoadingScreen from "./components/LoadingScreen";
-import Footer from "./components/Footer";
-function App() {
-  const [loaded, setLoaded] = useState(false);
 
+function App() {
+  const [firstVisit, setFirstVisit] = useState(true);
+  const [loaded, setLoaded] = useState(false);
   useEffect(() => {
     setTimeout(() => {
       setLoaded(true);
@@ -22,10 +22,7 @@ function App() {
   if (!loaded) {
     return (
       <div className="App">
-        <LoadingScreen />
-        {setTimeout(() => {
-          document.getElementById("loadingScreen").classList.add("fadeOut");
-        }, 1300)}
+        <LoadingScreen></LoadingScreen>
       </div>
     );
   } else {
@@ -34,15 +31,28 @@ function App() {
         <BrowserRouter>
           <Navbar></Navbar>
           <Routes>
-            <Route path="/" element={<Homepage />} exact />
-            <Route path="/about" element={<About />} exact />
-            <Route path="/projects" element={<Portfolio />} exact />
-            <Route path="/services" element={<Services />} exact />
-            <Route path="/contact" element={<Contact />} exact />
-            <Route path="/project/:name" element={<ProjectPage />} exact />
+            <Route
+              path="/"
+              element={
+                <Homepage
+                  firstVisit={firstVisit}
+                  setFirstVisit={setFirstVisit}
+                />
+              }
+              exact
+            />
+            <Route
+              path="/portfolio"
+              element={<Portfolio></Portfolio>}
+              exact
+            ></Route>
+            <Route
+              path="/portfolio/:name"
+              element={<ProjectPage></ProjectPage>}
+              exact
+            ></Route>
           </Routes>
         </BrowserRouter>
-        <Footer></Footer>
       </div>
     );
   }

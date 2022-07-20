@@ -1,128 +1,129 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
-import GreetingHeading from "../components/GreetingHeading";
-import PresentationHeading from "../components/PresentationHeading";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
-const Homepage = () => {
-  return (
-    <>
-      <div className="container d-flex flex-column home-container justify-content-center">
-        <div className="container-fluid d-flex flex-column align-items-center justify-content-center mt-5">
-          <div className="blurred-highlight-1"></div>
-
-          <GreetingHeading />
-          <PresentationHeading />
-          <div>
-            <Link
-              className="btn btn-primary btn-projects d-flex justify-content-center align-items-center"
-              to="/projects"
-            >
-              My projects
-            </Link>
-          </div>
-        </div>
-      </div>
-      <div className="container skill-set-container">
-        <h3 className="greeting-heading">Services</h3>
-        <div className="info-container-home d-flex flex-column flex-wrap justify-content-center align-items-center col">
-          <h3 className="info-heading">Web Development</h3>
-          <div className="d-flex flex-wrap flex-row justify-content-center">
-            <span className="sub-info">React.js</span>
-            <span className="sub-info">Node.js</span>
-            <span className="sub-info">express.js</span>
-            <span className="sub-info">MongoDB</span>
-            <span className="sub-info">socket.io</span>
-          </div>
-          <div className="code-header align-self-center">App.js</div>
-          <div className="code-snippet align-self-center">
-            <span className="code-formatting code-pink">import</span> React{" "}
-            <span className="code-formatting code-pink">from </span>'
-            <span className="code-formatting code-yellow">react</span>';
-            <br />
-            <br />
-            <span className="code-formatting code-blue">function</span>{" "}
-            <span className="code-formatting code-green">App</span>
-            <span className="code-formatting code-pink">()</span>{" "}
-            <span className="code-formatting code-pink">&#123;</span> <br />
-            &nbsp;<span className="code-formatting code-pink">return</span>{" "}
-            <span className="code-formatting code-orange">(</span> <br />
-            &nbsp;&nbsp;&#60;
-            <span className="code-formatting code-pink">div</span>{" "}
-            <span className="code-formatting code-blue">className</span>
-            <span className="code-formatting code-pink">=</span>"
-            <span className="code-formatting code-yellow">App</span>"&#62;{" "}
-            <br />
-            &nbsp;&nbsp;&nbsp;&#60;
-            <span className="code-formatting code-pink">h1</span>
-            &#62;Hello!&#60;/
-            <span className="code-formatting code-pink">h1</span>&#62;
-            <br />
-            &nbsp;&nbsp;&#60;/
-            <span className="code-formatting code-pink">div</span>&#62; <br />{" "}
-            &nbsp;<span className="code-formatting code-orange">)</span>; <br />
-            <span className="code-formatting code-pink">&#125;</span>;
-          </div>
-        </div>
-        <div className="info-container-home info-container-logo-design d-flex flex-column flex-wrap justify-content-center align-items-center col">
-          <h3 className="info-heading">Logo Design</h3>
-          <div className="d-flex flex-wrap flex-row justify-content-center">
-            <span className="sub-info">Minimalistic</span>
-            <span className="sub-info">Modern</span>
-            <span className="sub-info">Clean</span>
-            <span className="sub-info">Responsive</span>
-            <span className="sub-info">Expressive</span>
-          </div>
-          <img
-            className="logo-skeleton"
-            src="../img/logo-svg-skeleton.svg"
-            alt="logo-skeleton"
-          />
-        </div>
-      </div>
-      <div className="container">
-        <h3 className="greeting-heading">About me</h3>
-        <div className="container process-container d-flex flex-wrap justify-content-center">
-          <h3 className="info-header  info-container-header">
-            I'm a frontend developer and a self-taught graphic designer.
-          </h3>
-          <div className="information-card">
-            <h3 className="info-header orange-gradient-info">Creative</h3>
-
-            <p className="info-card-description">
-              I'm always looking to explore new things, to create fantastic
-              designs, and to implement clean solutions.
-            </p>
-          </div>
-          <div className="information-card">
-            <h3 className="info-header orange-gradient-info">Flexible</h3>
-
-            <p className="info-card-description">
-              I always try my best to adapt to all sorts of situations and
-              requirements, especially if they put me outside of my comfort
-              zone.
-            </p>
-          </div>
-          <div className="information-card">
-            <h3 className="info-header orange-gradient-info">Passionate</h3>
-
-            <p className="info-card-description">
-              I'm in love with the web and with the flexibility it offers in
-              creating fantastic looking and functional applications.
-            </p>
-          </div>
-          <h3 className="info-header info-container-header info-contact-header">
-            Let's get in contact!
-          </h3>
-        </div>
-        <div className="container d-flex justify-content-center align-items-center">
-          <Link className="btn-cta-home" to="/contact">
-            Contact
-          </Link>
-        </div>
-      </div>
-      <script src="reveal.js"></script>
-    </>
+const Homepage = (props) => {
+  const [firstVisit, setFirstVisit] = useState(props.firstVisit);
+  const [string, setString] = useState("Hello!");
+  const [stringClassList, setStringClassList] = useState("main-text fadein");
+  const [counter, setCounter] = useState(0);
+  const [scrollClassList, setScrollClassList] = useState(
+    "scroll-tap-container"
   );
+
+  const navigate = useNavigate();
+
+  const [transitionOnLeave, setTransitionOnLeave] = useState(
+    "main-app-container d-flex flex-column"
+  );
+
+  const transitionStart = () => {
+    if (transitionOnLeave === "main-app-container d-flex flex-column") {
+      setTransitionOnLeave("main-app-container d-flex flex-column fadeOut");
+    }
+    setTimeout(() => {
+      navigate("/portfolio");
+    }, 760);
+  };
+
+  const textArray = [
+    "I'm Gabriel.",
+    "I'm a web developer.",
+    "I'm working as an Intern @ ComputaCenter.",
+    "Let's craft a fantastic web together.",
+  ];
+
+  const handleScroll = () => {
+    if (counter === textArray.length) setStringClassList("main-text");
+    else setStringClassList("main-text fadeOut");
+    if (counter < textArray.length) {
+      setTimeout(() => {
+        setString(textArray[counter]);
+        setStringClassList("main-text fadein");
+        setCounter(counter + 1);
+      }, 800);
+    }
+
+    if (counter === textArray.length) {
+      setStringClassList("main-text fadeOut");
+      setScrollClassList("scroll-tap-container fadeOut");
+      setTimeout(() => {
+        setFirstVisit(false);
+
+        props.setFirstVisit(false);
+
+        setTimeout(() => {
+          setScrollClassList("scroll-tap-container fadeOut");
+          setStringClassList("main-text fadein");
+        }, 800);
+      }, 800);
+    }
+  };
+
+  if (firstVisit) {
+    return (
+      <section
+        className="home-container"
+        onTouchStart={handleScroll}
+        onWheel={handleScroll}
+      >
+        <div className="main-home d-flex justify-content-center align-items-center">
+          <h4 className={stringClassList}>{string}</h4>
+        </div>
+        <div className={scrollClassList}>
+          <span className="scroll-desktop fadein">Scroll</span>
+          <div className="tap-mobile fadein">
+            Tap the screen
+            <div className="circle-fill"></div>
+          </div>
+        </div>
+      </section>
+    );
+  } else {
+    return (
+      <div className={transitionOnLeave}>
+        <div className="social-container d-flex flex-column align-self-end">
+          <a
+            href="https://www.linkedin.com/in/gabrielmuresanionut/"
+            target="_blank"
+            className="bi social-icon bi-linkedin slide-in-right-1"
+          ></a>
+          <a
+            href="https://github.com/muresan-gabriel"
+            target="_blank"
+            className="bi social-icon bi-github slide-in-right-2"
+          ></a>
+          <a
+            href="https://dribbble.com/muresangabriel"
+            target="_blank"
+            className="bi social-icon bi-dribbble slide-in-right-3"
+          ></a>
+          <a
+            href="https://www.behance.net/muresangabriel"
+            target="_blank"
+            className="bi social-icon bi-behance slide-in-right-4"
+          ></a>
+        </div>
+        <section className="home-container d-flex flex-column justify-content-center container">
+          <div className="main-container d-flex flex-column">
+            <h1 className="display-heading">
+              <span className="fadein-1">Web Developer</span>
+              <br />
+              <span className="fadein-2">Graphic Designer</span>
+            </h1>
+
+            <p className="fadein-3">
+              I'm a junior developer experienced with React.
+              <br /> I'm doing my best to contribute to a fantastic web.
+            </p>
+
+            <a className="btn btn-portfolio fadein-3" onClick={transitionStart}>
+              Portfolio
+            </a>
+          </div>
+        </section>
+      </div>
+    );
+  }
 };
 
 export default Homepage;
