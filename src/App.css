@@ -411,6 +411,7 @@ body {
 
 .form-container {
   height: 80vh;
+  position: static;
   padding: 15px;
 }
 
