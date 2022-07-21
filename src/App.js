@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import Homepage from "./pages/Homepage";
 import Portfolio from "./pages/Portfolio";
 import ProjectPage from "./pages/ProjectPage";
+import Contact from "./pages/Contact";
 
 import Navbar from "./components/Navbar";
 
@@ -46,6 +47,7 @@ function App() {
               element={<Portfolio></Portfolio>}
               exact
             ></Route>
+            <Route path="/contact" element={<Contact></Contact>} exact></Route>
             <Route
               path="/portfolio/:name"
               element={<ProjectPage></ProjectPage>}
