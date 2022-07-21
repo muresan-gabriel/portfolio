@@ -66,6 +66,7 @@
 body {
   margin: 0;
   padding: 0;
+  position: static;
   box-sizing: border-box;
   background-color: #eae6f0;
   font-family: "Montserrat", sans-serif;
@@ -411,7 +412,6 @@ body {
 
 .form-container {
   height: 80vh;
-  position: fixed;
   padding: 15px;
 }
 
