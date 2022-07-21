@@ -10,7 +10,7 @@ const Contact = () => {
         className="contact-form d-flex flex-column align-items-start fadein"
         name="contact"
       >
-        <h4 className="display-heading">Let's get in contact!</h4>
+        <h4 className="display-heading">Currently unavailable.</h4>
 
         <input
           className="form-input-short-text"
@@ -18,6 +18,7 @@ const Contact = () => {
           type="text"
           name="name"
           placeholder="Full Name"
+          disabled
         />
         <span className="error-message d-none" id="errorName">
           The name should be longer than 3 characters.
@@ -31,11 +32,12 @@ const Contact = () => {
           type="email"
           name="email"
           placeholder="Email Address"
+          disabled
         />
         <span className="error-message d-none" id="errorEmail">
           Please enter a valid email address.
         </span>
-        <select className="select" id="select">
+        <select className="select" id="select" disabled>
           <option>Reason of Contact</option>
           <option>Hiring / Job Proposal</option>
           <option>Project Proposal</option>
@@ -51,6 +53,7 @@ const Contact = () => {
           type="text"
           name="message"
           placeholder="Message"
+          disabled
         ></textarea>
         <span className="error-message d-none" id="errorMessage">
           The message should be atleast 50 characters long.
@@ -64,6 +67,7 @@ const Contact = () => {
             type="checkbox"
             id="privacyPolicy"
             name="privacyPolicy"
+            disabled
           />{" "}
           I have read and I agree with the{" "}
           <button
@@ -71,6 +75,7 @@ const Contact = () => {
             className="policy-link"
             data-bs-toggle="modal"
             data-bs-target="#exampleModal"
+            disabled
           >
             Privacy Policy
           </button>
@@ -79,7 +84,12 @@ const Contact = () => {
         <span className="error-message d-none" id="errorPolicy">
           You must read and accept the Privacy Policy.
         </span>
-        <button className="btn btn-submit-form" type="submit" id="submitButton">
+        <button
+          className="btn btn-submit-form"
+          type="submit"
+          id="submitButton"
+          disabled
+        >
           Send
         </button>
       </form>
