@@ -298,6 +298,26 @@ body {
   color: white;
 }
 
+.btn-contact {
+  font-size: 15px;
+  padding: 10px 35px 10px 35px;
+  border-radius: 15px;
+  border: none;
+  margin-top: 10px;
+  margin-left: 5px;
+  transition: 0.3s;
+  align-self: center;
+}
+.btn-contact:hover {
+  background-color: #ffa545;
+}
+
+.button-container {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+}
+
 /* PORTFOLIO PROJECTS */
 
 .project-container {
@@ -408,117 +428,43 @@ body {
   margin: 10px;
 }
 
-/* FORM STYLING */
+/* CONTACT */
 
-.form-container {
+.contact-container {
   height: 80vh;
-  padding: 15px;
 }
 
-.form-input-short-text {
-  font-weight: 600;
-  cursor: auto;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  width: 100%;
-  padding: 10px;
-  font-size: 18px;
-  border-radius: 10px;
-  border: 1px solid #552ed681;
-  margin: 5px 0 5px 0;
-  box-shadow: none;
-  outline: none;
-  transition: 0.2s;
+.email-cta {
+  font-weight: 700;
+  font-size: 32px;
 }
 
-.form-input-short-text:focus {
-  box-shadow: 0px -4px 0px #5e2dff inset;
-}
-
-.form-input-long-text {
-  font-weight: 600;
-  resize: none;
-  cursor: auto;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  width: 100%;
-  height: 250px;
-  padding: 10px;
-  font-size: 18px;
-  border-radius: 10px;
-  border: 1px solid #552ed681;
-  margin: 5px 0 5px 0;
-  box-shadow: none;
-  outline: none;
-  transition: 0.2s;
-}
-
-.form-input-long-text:focus {
-  box-shadow: 0px -4px 0px #5e2dff inset;
-}
-
-.select {
-  font-weight: 600;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  width: 100%;
-  padding: 10px;
-  font-size: 18px;
-  border-radius: 10px;
-  border: 1px solid #552ed681;
-  margin: 5px 0 5px 0;
-  box-shadow: none;
-  outline: none;
-  transition: 0.2s;
-}
-
-.select option {
-  font-weight: 600;
-}
-
-.policy-link {
-  background-color: rgba(255, 255, 255, 0);
-  border: none;
-  padding: 0;
-  margin: 0;
+.email-cta a {
   color: #5e2dff;
-  text-decoration: underline;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
-.form-check-box {
-  accent-color: #5e2dff;
-  -ms-transform: scale(1.5); /* IE */
-  -moz-transform: scale(1.5); /* FF */
-  -webkit-transform: scale(1.5); /* Safari and Chrome */
-  -o-transform: scale(1.5); /* Opera */
-  transform: scale(1.5);
-  margin: 5px;
+.email-cta a:hover {
+  color: #562be5;
 }
 
-.btn-submit-form {
-  background-color: #5e2dff;
-  color: white;
-  width: 100%;
-  height: 50px;
-  border: none;
-}
-.btn-submit-form:hover {
-  color: white;
-  background-color: #5630d3;
+.additional-contact-info {
+  font-size: 21px;
+  font-weight: 600;
+  margin-top: 25px;
+  text-align: center;
 }
 
-.bi-patch-question-fill {
-  font-size: 24px;
-  margin: 10px;
+/* ABOUT */
+
+.main-about-heading {
+  font-size: 64px;
+  font-weight: 700;
+  margin-top: 15%;
 }
 
-.error-message {
-  font-size: 14px;
-  color: #ff705d;
-}
+.about-paragraph
 
 /* GRADIENTS */
 .purple {
@@ -677,6 +623,14 @@ body {
   .project-page_project-external {
     text-align: center;
     align-self: center;
+  }
+  .button-container {
+    display: flex;
+    align-self: flex-start;
+    flex-direction: row;
+  }
+  .email-cta {
+    font-size: 64px;
   }
 }
 

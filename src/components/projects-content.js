@@ -40,7 +40,7 @@ const projects = [
     projectLink: "/portfolio/la-moara",
     technologies: ["React", "Node", "socket.io"],
     type: "dev",
-    images: ["../img/logo-svg.svg", ""],
+    images: ["../img/portfolio-imgs/cognizant-1.png"],
     external: "https://la-moara-cognizant-softvision-course.netlify.app/",
   },
 ];

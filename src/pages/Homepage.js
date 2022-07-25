@@ -24,6 +24,14 @@ const Homepage = (props) => {
       navigate("/portfolio");
     }, 760);
   };
+  const transitionStartContact = () => {
+    if (transitionOnLeave === "main-app-container d-flex flex-column") {
+      setTransitionOnLeave("main-app-container d-flex flex-column fadeOut");
+    }
+    setTimeout(() => {
+      navigate("/contact");
+    }, 760);
+  };
 
   const textArray = [
     "I'm Gabriel.",
@@ -115,10 +123,20 @@ const Homepage = (props) => {
               I'm a junior developer experienced with React.
               <br /> I'm doing my best to contribute to a fantastic web.
             </p>
-
-            <a className="btn btn-portfolio fadein-3" onClick={transitionStart}>
-              Portfolio
-            </a>
+            <div className="button-container">
+              <a
+                className="btn btn-portfolio fadein-3"
+                onClick={transitionStart}
+              >
+                Portfolio
+              </a>
+              <a
+                className="btn btn-contact fadein-3"
+                onClick={transitionStartContact}
+              >
+                Contact
+              </a>
+            </div>
           </div>
         </section>
       </div>
