@@ -87,6 +87,15 @@ body {
   user-drag: none;
 }
 
+/* TEMPORARY DELETE WHEN DONE */
+
+.page-progress-alert {
+  text-align: center;
+  font-weight: 700;
+}
+
+/* TEMPORARY DELETE WHEN DONE END */
+
 /* SELECTION */
 
 ::-moz-selection {
