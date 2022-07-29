@@ -344,22 +344,6 @@ body {
   transform: translateX(15px);
 }
 
-.project-border-dev {
-  border-left: 10px solid #552ed6;
-}
-
-.project-border-dev:hover {
-  border-left: 20px solid #552ed6;
-}
-
-.project-border-design {
-  border-left: 10px solid #ff6f36;
-}
-
-.project-border-design:hover {
-  border-left: 20px solid #ff6f36;
-}
-
 .project-title {
   font-weight: 600;
   transition: 0.3s;
@@ -468,12 +452,14 @@ body {
 /* ABOUT */
 
 .main-about-heading {
-  font-size: 64px;
+  font-size: 48px;
   font-weight: 700;
   margin-top: 15%;
 }
 
-.about-paragraph
+.about-paragraph {
+  font-size: 16px;
+}
 
 /* GRADIENTS */
 .purple {
